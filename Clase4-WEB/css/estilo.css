@@ -1,0 +1,43 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+}
+h1 {
+	color: rgb(0, 0, 0);
+	background-color: #c0c0c5;
+	padding: 10px;
+	text-align: center;
+	text-decoration: underline;
+}
+.highlight1 {
+	background-color: #55ec55;
+}
+.highlight2 {
+	background-color: rgb(225, 241, 73);
+	font-style: italic;
+}
+.highlight3 {
+	background-color: #55ecec;
+}
+.bold1 {
+	font-weight: bold;
+	color: #a38021;
+}
+.bold2 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+.color1 {
+	color: rgb(226, 68, 47);
+}
+.style1 {
+	font-style: italic;
+	color: rgb(0, 153, 255);
+	text-decoration: underline;
+}
+.style2 {
+	text-decoration:line-through;
+}
+p , li {
+	font-size: 16px;
+}
