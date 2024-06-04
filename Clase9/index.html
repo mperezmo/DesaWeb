@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suscripción al Diario</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Aquí va la cabecera del diario -->
+    </header>
+
+    <h2 class="my-4">HOLA <span id="nombre-display"></span></h2>
+
+    <form id="subscription-form" class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="error-message" id="error-nombre"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="error-message" id="error-email"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" required>
+          <div class="error-message" id="error-contrasena"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="repetir-contrasena">Repetir Contraseña</label>
+          <input type="password" class="form-control" id="repetir-contrasena" required>
+          <div class="error-message" id="error-repetir-contrasena"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="edad">Edad</label>
+          <input type="text" class="form-control" id="edad" required>
+          <div class="error-message" id="error-edad"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="telefono">Teléfono</label>
+          <input type="text" class="form-control" id="telefono" required>
+          <div class="error-message" id="error-telefono"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="direccion">Dirección</label>
+          <input type="text" class="form-control" id="direccion" required>
+          <div class="error-message" id="error-direccion"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" class="form-control" id="ciudad" required>
+          <div class="error-message" id="error-ciudad"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="codigo-postal">Código Postal</label>
+          <input type="text" class="form-control" id="codigo-postal" required>
+          <div class="error-message" id="error-codigo-postal"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="dni">DNI</label>
+          <input type="text" class="form-control" id="dni" required>
+          <div class="error-message" id="error-dni"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+    
+  </div>
+  <script src="subscription.js"></script>
+</body>
+</html>
