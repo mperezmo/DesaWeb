@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('subscription-form');
   
-    // Validaciones de los campos
     const validateField = (field, errorElement, validationFunction) => {
       field.addEventListener('blur', () => {
         const errorMessage = validationFunction(field.value);
@@ -19,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errorElement.textContent = '';
       });
     };
-  
-    // Funciones de validación
+
     const validateNombre = (value) => {
         if (value.length <= 6 || !value.includes(' ')) {
             return 'El nombre completo debe tener más de 6 letras y al menos un espacio.';
@@ -89,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return '';
     };
   
-    // Elementos del formulario
     const nombre = document.getElementById('nombre');
     const email = document.getElementById('email');
     const contrasena = document.getElementById('contrasena');
@@ -111,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorCodigoPostal = document.getElementById('error-codigo-postal');
     const errorDni = document.getElementById('error-dni');
   
-    // Aplicar validaciones
     validateField(nombre, errorNombre, validateNombre);
     validateField(email, errorEmail, validateEmail);
     validateField(contrasena, errorContrasena, validateContrasena);
@@ -122,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
     validateField(codigoPostal, errorCodigoPostal, validateCodigoPostal);
     validateField(dni, errorDni, validateDni);
   
-    // Validación de la repetición de contraseña
     repetirContrasena.addEventListener('blur', () => {
       const errorMessage = contrasena.value !== repetirContrasena.value ? 'Las contraseñas deben coincidir.' : '';
       errorRepetirContrasena.textContent = errorMessage;
@@ -134,12 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
       errorRepetirContrasena.textContent = '';
     });
   
-    // Actualización del título en tiempo real
     nombre.addEventListener('input', () => {
       document.getElementById('nombre-display').textContent = nombre.value.toUpperCase();
     });
   
-    // Manejo del envío del formulario
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       if (form.checkValidity()) {
